@@ -35,8 +35,10 @@ class Admin(User):
         restaurant.menu.view_item()
 
 class Customer(User):
-    def __init__(self,name,phone,address,email):
-        super().__init__(name,phone,address,email)
+    def __init__(self,name,phone,email):
+        self.name=name
+        self.phone=phone
+        self.email=email
         self.cart=None
 
     def add_cart(self,restaurant,item):
@@ -45,7 +47,7 @@ class Customer(User):
             pass
         else:
             print('{item} Not Found in this Restaurant')
-            
+             
     def  show_menu(self,restaurant):
         restaurant.menu.view_item()
 
