@@ -6,14 +6,6 @@ from orders import *
 
 
 
-
-
-    # def add_cart(self,restaurant,item,quantity):      
-    # def  show_menu(self,restaurant):
-    #     restaurant.menu.view_item()
-    # def view_cart(self):
-       
-    # def pay_bill(self): 
 Restaurant_Name=Restaurant('Mamar Restaurant')
 def customer_menu():
     name=str(input('Enter Your Name '))
@@ -25,7 +17,7 @@ def customer_menu():
         print(f'Welcome {customer.name}!!')
         print('1. View Menu')
         print('2. Add item to cart')
-        print('3. View item')
+        print('3. View Cart')
         print('4. PayBill')
         print('5. Exit')
 
@@ -61,7 +53,7 @@ def admin_menu():
         print('1. Add item')
         print('2. Add Employee')
         print('3. View Employee')
-        print('4. View item')
+        print('4. View Menu')
         print('5. Delete item')
         print('6. Exit')
 
@@ -73,7 +65,6 @@ def admin_menu():
             item=Fooditem(item_name,item_price,item_quantity)
             admin.add_item(Restaurant_Name,item)
         elif n==2:
-            name,phone,address,email,designation,salary,age
             name=input('Enter Employee Name ')
             phone=input('Enter Employee Phone ')
             address=input('Enter Employee Address ')

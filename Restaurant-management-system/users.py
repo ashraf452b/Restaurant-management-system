@@ -42,16 +42,15 @@ class Customer(User):
         self.cart=Order()
 
     def add_cart(self,restaurant,item,quantity):
-        found= restaurant.menu.find_item(item)
-        if found:
-            if quantity > found.quantity:
+        self.found= restaurant.menu.find_item(item)
+        if self.found:
+            if quantity > self.found.quantity:
                 print('Item Quantity Exceed')
             else:
-                found.quantity=quantity
+                self.cart.add_item(self.found,quantity) 
                 print('Item Added')
-                self.cart.add_item(found)
         else:
-            print('{item} Not Found in this Restaurant')
+            print(f'{item} Not Found in this Restaurant')
              
     def  show_menu(self,restaurant):
         restaurant.menu.view_item()
@@ -62,7 +61,24 @@ class Customer(User):
         for item,quantity in self.cart.items.items():
             print(f'{item.name}\t{item.price}\t{quantity}')
             print(f'Total price : {self.cart.total_price}')
+
     def pay_bill(self):
-        print(f'Total {self.cart.total_price} paid succesfully')
-        self.cart.clear()
+        print('1. Cash Payment')
+        print('2. Card Payment')
+        print('3. Bkash Payment')
+        while True:
+            payment=int(input('Select Your Payment method '))
+            if payment==1:
+                print(f'Total {self.cart.total_price} paid succesfully via Cash')
+            elif payment==2:
+                print(f'Total {self.cart.total_price} paid succesfully via Card')
+            elif payment==3:
+                print(f'Total {self.cart.total_price} paid succesfully via Bkash')
+            else:
+                print('Invalid option Select Correct Method')
+            if payment==1 or payment==2 or payment==3:
+                break
+        for item, quantity in self.cart.items.items():
+            item.quantity -= quantity
+        self.cart.clear_cart()
 

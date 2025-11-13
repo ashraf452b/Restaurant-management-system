@@ -2,11 +2,11 @@ class Order:
     def __init__(self):
         self.items={}
         
-    def add_item(self,item):
+    def add_item(self, item, quantity):
         if item in self.items:
-            self.items[item]+=item.quantity
+            self.items[item] += quantity
         else:
-            self.items[item]=item.quantity
+            self.items[item] = quantity
     
     def remove_item(self,item):
         if item in self.items:
