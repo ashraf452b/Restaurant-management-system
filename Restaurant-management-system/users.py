@@ -62,4 +62,7 @@ class Customer(User):
         for item,quantity in self.cart.items.items():
             print(f'{item.name}\t{item.price}\t{quantity}')
             print(f'Total price : {self.cart.total_price}')
+    def pay_bill(self):
+        print(f'Total {self.cart.total_price} paid succesfully')
+        self.cart.clear()
 

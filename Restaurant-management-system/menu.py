@@ -14,7 +14,7 @@ class Menu:
     def remove_item(self,item):
         found=self.find_item(item)
         if found:
-            self.items.remove(item)
+            self.items.remove(found)
         else:
             print(f"This item Not Found")
     
