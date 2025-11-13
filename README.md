@@ -68,7 +68,8 @@ cd Restaurant-management-system/Restaurant-management-system
 ```
 
 4️⃣ Run the program
-``` python main.py
+```
+python main.py
 ```
 
 🎯 Usage
