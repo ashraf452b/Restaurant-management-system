@@ -78,6 +78,7 @@ class Customer(User):
                 print('Invalid option Select Correct Method')
             if payment==1 or payment==2 or payment==3:
                 break
+            
         for item, quantity in self.cart.items.items():
             item.quantity -= quantity
         self.cart.clear_cart()
