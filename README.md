@@ -41,7 +41,7 @@ This project follows a clean modular architecture and is suitable for learning O
 5. Git & GitHub
 
 📂 Project Structure
-
+```
 Restaurant-management-system/
 │
 ├── food_item.py
@@ -50,6 +50,7 @@ Restaurant-management-system/
 ├── orders.py
 ├── restaurant.py
 └── users.py
+```
 
 ⚙️ How to Run
 1️⃣ Install Python 3
@@ -57,13 +58,13 @@ Restaurant-management-system/
 Make sure Python 3 is installed.
 
 2️⃣ Clone the Repository
-git clone https://github.com/ashraf452b/Restaurant-management-system.git
+```git clone https://github.com/ashraf452b/Restaurant-management-system.git```
 
 3️⃣ Navigate to project folder
-cd Restaurant-management-system/Restaurant-management-system
+```cd Restaurant-management-system/Restaurant-management-system```
 
 4️⃣ Run the program
-python main.py
+```python main.py```
 
 🎯 Usage
 
