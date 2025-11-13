@@ -58,13 +58,18 @@ Restaurant-management-system/
 Make sure Python 3 is installed.
 
 2️⃣ Clone the Repository
-```git clone https://github.com/ashraf452b/Restaurant-management-system.git```
+```
+git clone https://github.com/ashraf452b/Restaurant-management-system.git
+```
 
 3️⃣ Navigate to project folder
-```cd Restaurant-management-system/Restaurant-management-system```
+```
+cd Restaurant-management-system/Restaurant-management-system
+```
 
 4️⃣ Run the program
-```python main.py```
+``` python main.py
+```
 
 🎯 Usage
 
